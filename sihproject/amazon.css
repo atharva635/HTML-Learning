@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    font-family: Arial;
+    border: border-box;
+
+}
+.navbar{
+    align-items: center;
+    /* to make all navbar into center  */
+    background-color: #0f1111;
+    height: 60px;
+    /* backgound height 60px ad widht cover all desktop eventually  */
+    color: white;
+    /* font color we take im white color  */
+    display: flex;
+    /* the above display flex is used to write all navbar in single line   */
+    justify-content: space-around;
+    /* this is for dividing equally all the items and when we adding number of of items
+    then it manages equally */
+
+}
+.nav-logo{
+    height: 55px;
+    width: 100px;
+}
+.logo{
+    /* background-image: url(amazonlogo.png); */
+
+    /* image is not seen becouse it is in div and div will be seen when we have to give
+    it a specific height  for this we make .nav-logo above this*/
+    background-size: cover;
+    height: 55px;
+    width: 100%;
+}
+
+/* box 2 */
+
+.border:hover{
+    border:  2px solid rgb(0, 255, 8);
+    /* this make a border around the navbar when we hover  */
+}
+.add-first{
+  color: #CCCCCC;
+  font-family: Arial;
+  font-size: 16px;
+  margin-left: 14px;
+}
+.add-second{
+  color: #FFFFFF;
+  font-family: Arial;
+  font-size: 18px;
+}
+.icon{
+    display: flex;
+}
+
+/* box 3 */
+
+.nav-search{
+    display: flex;
+    /* display flex used for making all in one line  */
+    justify-content: space-evenly;
+    /* thai all three items are spaced evenly  */
+    width: 620px;
+    height: 40px;   
+}
+
+.nav-search:hover{
+    border: 2px solid orange;
+}
+
+.search-select{
+        color: #0F1111;
+        background-color: #c7bfbf;
+        text-align: center;
+        width: 55px;
+        height: 40px;
+        /* all is to get in center  */
+        font-size: 14px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border: none;      
+}
+.search-input{
+    width: 100%;
+    /* all the which is vacant now covered by search  */
+    height: 38px;
+    align-items: center;
+    border: none;
+    font-size: 1rem;
+}
+.search-icon{
+    width: 52px;
+    height: 40px;
+    background-color: rgb(219, 121, 9);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    /* above two are used to give search bar in middle of the border but it comes
+    between the row for between the column down stynta used */
+    align-items: center;
+    font-size: 1.5rem;
+    color: #0f1111;   
+}
+
+/* box35/10 */
+
+/* .language image{
+    background-image: url(americaflag.png);
+    background-size: cover;
+    height: 16px;
+    width: 21px;
+} */
+.lang image{
+    /* background-image: url(americaflag.png); */
+
+    background-size: cover;
+    border: none;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: Arial,sans-serif;
+    font-weight: 900;
+}
+
+/* box4 */
+
+hello{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.nav-second{
+    font-size:14px;
+    font-family: Arial,sans-serif;
+    font-weight: 700;
+    border: none;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* box5 */
+
+hello{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.nav-orders{
+    font-size:14px;
+    font-family: Arial,sans-serif;
+    font-weight: 700;
+    border: none;
+    background-color: #000000;
+    color: #FFFFFF;
+
+}
+
+/* box6 */
+
+.nav-cart i{
+    /* nav cart and that i represent the icon first */
+      font-size:30px ;
+    
+}
+.nav-cart{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* second line  */
+
+.panel{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #222f3d;
+    height: 40px;
+    align-items: center;
+    color: #ffffff;
+
+}
+.panel-option p{
+    /* all panel option ke saare para ko inline krna to  */
+   display: inline; 
+   margin-left: 8px;
+}
+.panel-option{
+    width: 77%;  
+}
+.panel-deals{
+    font-weight: 500;
+}
+
+
+/* middle */
+
+.hero-section{
+    /* background-image: url(amazonwebimg.png);
+     */
+    background-size: cover;
+    height: 400px;  
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+.hero-message{
+    background-color: white;
+    color: #000000;
+    height: 40px;
+    font-size: 16px;
+    width: 96%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 65px; 
+    font-weight: 500;
+}
+.hero-message a{
+    /* a is for ankar  */
+    color: #007185;
+
+}
+
+
+/* shop-section */
+
+.shop-section{
+    display: flex;
+    flex-wrap: wrap;
+    /* for the four box in one line use wrap is is 12 in one line */ 
+    justify-content: space-evenly;
+    background-color: rgb(186, 92, 92);
+    
+}
+
+.Box{
+    /* border: 2px solid black; */
+    width: 356px;
+    height: 420px;
+    background-color: #ffffff;
+    padding: 20px 0px 15px; 
+}
+.Box p{
+    color: #007185;
+}
+.box-img{
+    height: 380px;
+    background-size: cover;
+   
+}
+.box-content{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* footer */
+
+footer{
+     margin-top: 15px; 
+}
+
+.back-to-top{
+    width: 100%;
+    background-color: #222f3d;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    /* margin-left: 40px; */
+}
+
+/* second footer  */
+
+.get-to-know{
+    background-color: #007185;
+    display: flex;
+    justify-content: space-evenly;
+    height: 250px;
+    color: #ffffff9c;
+    
+}
+.get-to-know a{
+    display: block;
+    /* this will give the Atharva  text in one line then in second line ......  */
+    font-size: 15px;
+    margin-top: 9px;
+    color: #ffffff;
+}
+ul{
+    margin-top: 20px;
+}
+
+
+/* third footer  */
+
+.amazon{
+    height: 68px;
+    background-color: #222f3d;
+    border-top: 3px solid #02e214;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-a {
+    /* background-image: url(amazonlogo.png);
+     */
+    /* image is not seen becouse it is in div and div will be seen when we have to give
+    it a specific height  for this we make .nav-logo above this*/
+    background-size: cover;
+    height: 55px;
+    width: 100px;
+}
+.last{
+    background-color: #007185;
+    height: 50px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;  */
+    /* in doing flex the both line come in same line that is copyright and my goal so for this we make 
+    new controller individually for copyright and my goal  */
+}
+.copyright{
+        font-weight:200;
+        color: #ffffff;
+        text-align: center;
+        padding-top: 7px;
+}
+.My-Goal{
+    font-weight:200;
+    color: #ffffff;
+    text-align: center;
+}

@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Georgia', serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* .resume {
+    max-width: 800px;   /* better for A4
+    width: 100%;
+    margin: auto;
+    background: white;
+    padding: 5px 20px;
+    box-shadow: none;   /* remove shadow for print */
+/* } */  */
+.resume {
+    max-width: 800px;   /* IMPORTANT */
+    margin: auto;
+    padding: 20px;
+}
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 9px;
+}
+
+header h1 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;              /* IMPORTANT */
+    justify-content: center;
+    align-items: center;
+    gap: 10px 20px;               /* row gap + column gap */
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.contact p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: black;
+    word-break: break-word;       /* prevents overflow */
+}
+
+.contact span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Sections */
+section {
+    margin-top: 10px;
+}
+
+section h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* Row Layout */
+/* Row Layout */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.row h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.row p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.right {
+    text-align: right;
+    flex-shrink: 0;   /* prevents shrinking but allows proper fit */
+}
+/* .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-right: 0px;
+}
+
+.row h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.row p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.right {
+    text-align: right;
+    min-width: 200px;
+} */
+
+/* Coursework Columns */
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.columns ul {
+    padding-left: 18px;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Lists */
+ul {
+    margin-top: 5px;
+    padding-left: 18px;
+    font-size: 14px;
+}
+
+li {
+    margin-bottom: 4px;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authority Dashboard | Eco Sentinels</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4faff;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background: linear-gradient(90deg, #03045e, #0077b6);
+      padding: 15px 30px;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #0077b6;
+      margin-bottom: 15px;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    th {
+      background: #f1f1f1;
+      color: #333;
+    }
+
+    .status {
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .active { background: #ffebee; color: #d32f2f; border: 1px solid #d32f2f; }
+    .resolved { background: #e8f5e9; color: #388e3c; border: 1px solid #388e3c; }
+
+    /* Alerts section */
+    .alerts {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    .card h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 15px;
+      margin: 5px 0;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      background: #03045e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    Eco Sentinels | Authority Dashboard
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Tickets</a>
+      <a href="#">Hotspots</a>
+      <a href="#">Reports</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Tickets Table -->
+    <h2>🎫 Auto-Generated Tickets</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Ticket ID</th>
+          <th>Location</th>
+          <th>Issue</th>
+          <th>Severity</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#T001</td>
+          <td>Ward 5, Delhi</td>
+          <td>High TDS detected</td>
+          <td>High</td>
+          <td><span class="status active">Active</span></td>
+        </tr>
+        <tr>
+          <td>#T002</td>
+          <td>Zone 3, Mumbai</td>
+          <td>Bacterial contamination suspected</td>
+          <td>Critical</td>
+          <td><span class="status active">Active</span></td>
+        </tr>
+        <tr>
+          <td>#T003</td>
+          <td>Sector 10, Noida</td>
+          <td>Pipeline leakage reported</td>
+          <td>Medium</td>
+          <td><span class="status resolved">Resolved</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Hotspot Alerts -->
+    <h2>🚨 Hotspot Alerts</h2>
+    <div class="alerts">
+      <div class="card">
+        <h3>Delhi - Ward 5</h3>
+        <p>🔴 High contamination risk detected</p>
+        <p>📅 2025-09-08 10:20 AM</p>
+      </div>
+      <div class="card">
+        <h3>Mumbai - Zone 3</h3>
+        <p>🟠 Bacterial anomaly detected</p>
+        <p>📅 2025-09-07 08:45 PM</p>
+      </div>
+      <div class="card">
+        <h3>Noida - Sector 10</h3>
+        <p>🟢 Leakage resolved by maintenance team</p>
+        <p>📅 2025-09-06 05:30 PM</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Eco Sentinels | Authority Dashboard
+  </footer>
+
+</body>
+</html>

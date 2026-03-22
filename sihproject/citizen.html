@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citizen Reporting | Eco Sentinels</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4faff;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0077b6;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 6px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    input[type="file"] {
+      border: none;
+    }
+
+    button {
+      background: #0077b6;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #023e8a;
+    }
+
+    .preview {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .preview img {
+      max-width: 100%;
+      max-height: 250px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .gps {
+      background: #e9f7fe;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    📝 Citizen Reporting - Eco Sentinels
+  </header>
+
+  <div class="container">
+    <h2>Report Unsafe Water</h2>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="desc">Description of Issue</label>
+      <textarea id="desc" rows="4" placeholder="Describe the issue (color, smell, leakage, etc.)" required></textarea>
+
+      <label for="photo">Upload Photo</label>
+      <input type="file" id="photo" accept="image/*" onchange="previewImage(event)">
+      <div class="preview">
+        <img id="preview" src="" alt="" style="display:none;">
+      </div>
+
+      <label>Location (GPS)</label>
+      <div class="gps" id="gps">Fetching location...</div>
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </div>
+
+  <script>
+    // Image Preview
+    function previewImage(event) {
+      const preview = document.getElementById("preview");
+      preview.src = URL.createObjectURL(event.target.files[0]);
+      preview.style.display = "block";
+    }
+
+    // Get GPS Location
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const gpsDiv = document.getElementById("gps");
+          gpsDiv.innerHTML = 
+            `📍 Latitude: ${pos.coords.latitude.toFixed(4)}, Longitude: ${pos.coords.longitude.toFixed(4)}`;
+        },
+        () => {
+          document.getElementById("gps").innerHTML = "⚠️ Unable to fetch location.";
+        }
+      );
+    } else {
+      document.getElementById("gps").innerHTML = "❌ GPS not supported.";
+    }
+  </script>
+
+</body>
+</html>

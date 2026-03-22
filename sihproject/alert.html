@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Sentinels | Water Quality Alerts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(to right, #0077b6, #00b4d8);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+    .navbar h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Page content */
+    .container {
+      padding: 2rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background: #f1f1f1;
+    }
+
+    /* Tags */
+    .tag {
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .high { background: #ffebee; color: #d32f2f; border: 1px solid #d32f2f; }
+    .medium { background: #fff8e1; color: #f9a825; border: 1px solid #f9a825; }
+    .low { background: #e8f5e9; color: #388e3c; border: 1px solid #388e3c; }
+    .active { background: #ffebee; color: #c62828; border: 1px solid #c62828; }
+    .resolved { background: #e8f5e9; color: #2e7d32; border: 1px solid #2e7d32; }
+
+    /* Dropdown */
+    .filter {
+      margin-bottom: 1rem;
+    }
+    select {
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      padding: 1rem;
+      text-align: center;
+      background: #f1f1f1;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>Eco Sentinels | Safe Water Monitoring</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Alerts</a></li>
+      <li><a href="#">AI Insights</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <div class="container">
+    <h2>Recent Water Quality Alerts</h2>
+    <div class="filter">
+      <label for="severityFilter">Filter: </label>
+      <select id="severityFilter" onchange="filterTable()">
+        <option value="all">All Levels</option>
+        <option value="high">High Risk</option>
+        <option value="medium">Medium Risk</option>
+        <option value="low">Low Risk</option>
+      </select>
+    </div>
+    <table id="alertsTable">
+      <thead>
+        <tr>
+          <th>Location</th>
+          <th>Severity</th>
+          <th>Time</th>
+          <th>Message</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Zone A (Pipeline-1)</td>
+          <td><span class="tag high">High</span></td>
+          <td>2025-09-07 14:32</td>
+          <td>Unsafe pH levels detected (5.2)</td>
+          <td><span class="tag active">Active</span></td>
+        </tr>
+        <tr>
+          <td>Zone B (Tank-2)</td>
+          <td><span class="tag medium">Medium</span></td>
+          <td>2025-09-07 13:05</td>
+          <td>Turbidity above safe limit</td>
+          <td><span class="tag active">Active</span></td>
+        </tr>
+        <tr>
+          <td>Zone A (Pipeline-3)</td>
+          <td><span class="tag low">Low</span></td>
+          <td>2025-09-06 19:44</td>
+          <td>Sensor calibration required</td>
+          <td><span class="tag resolved">Resolved</span></td>
+        </tr>
+        <tr>
+          <td>Zone C (Reservoir)</td>
+          <td><span class="tag high">High</span></td>
+          <td>2025-09-05 16:20</td>
+          <td>Bacterial contamination risk detected</td>
+          <td><span class="tag resolved">Resolved</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Eco Sentinels | Safe Water Monitoring System
+  </footer>
+
+  <script>
+    function filterTable() {
+      const filter = document.getElementById("severityFilter").value;
+      const rows = document.querySelectorAll("#alertsTable tbody tr");
+
+      rows.forEach(row => {
+        const severity = row.querySelector("td:nth-child(2) span").textContent.toLowerCase();
+        if (filter === "all" || filter === severity) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

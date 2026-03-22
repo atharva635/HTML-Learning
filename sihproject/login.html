@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Sentinels | Login</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", sans-serif; }
+    body {
+      background: linear-gradient(to right, #0077b6, #00b4d8, #90e0ef);
+      display: flex; justify-content: center; align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+
+    .login-container h1 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+    .login-container p {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin: 15px 0;
+      text-align: left;
+    }
+    .input-group label {
+      font-weight: bold;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .input-group input {
+      width: 100%; padding: 10px;
+      border-radius: 6px; border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    .input-group input:focus {
+      border: 1px solid #0077b6;
+      outline: none;
+    }
+
+    .login-btn {
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+    .login-btn:hover {
+      background: #023e8a;
+    }
+
+    .extra-links {
+      margin-top: 15px;
+      font-size: 13px;
+    }
+    .extra-links a {
+      color: #0077b6;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    .extra-links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>💧 Eco Sentinels</h1>
+    <p>Safe Water Monitoring System – Login</p>
+
+    <form onsubmit="return validateLogin(event)">
+      <div class="input-group">
+        <label for="username">Username / Email</label>
+        <input type="text" id="username" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+      </div>
+
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <div class="extra-links">
+      <a href="#">Forgot Password?</a> | 
+      <a href="#">Sign Up</a>
+    </div>
+  </div>
+
+  <script>
+    function validateLogin(event) {
+      event.preventDefault();
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      // Simple check (Demo purpose)
+      if (user === "janta" && pass === "123") {
+        window.location.href = "watermoni.html"; // redirects to your main UI
+      } else {
+        alert("Invalid username or password ❌");
+      }
+    }
+  </script>
+
+</body>
+</html>

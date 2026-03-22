@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Predictions | Eco Sentinels</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4faff;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background: linear-gradient(90deg, #03045e, #0077b6);
+      padding: 15px 30px;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #0077b6;
+      margin-bottom: 15px;
+    }
+
+    /* Predictions List */
+    .prediction-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .prediction-card h3 {
+      margin: 0 0 10px;
+      color: #03045e;
+    }
+    .prediction-card p {
+      margin: 5px 0;
+      font-size: 15px;
+    }
+    .risk {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .high { background: #ffebee; color: #d32f2f; border: 1px solid #d32f2f; }
+    .medium { background: #fff8e1; color: #f9a825; border: 1px solid #f9a825; }
+    .low { background: #e8f5e9; color: #388e3c; border: 1px solid #388e3c; }
+
+    /* Chart placeholder */
+    .chart {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    .chart img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      background: #03045e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    Eco Sentinels | AI Predictions
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Dashboard</a>
+      <a href="#">Reports</a>
+      <a href="#">Alerts</a>
+      <a href="#">AI Insights</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>🤖 AI-Powered Contamination Predictions</h2>
+
+    <!-- Prediction 1 -->
+    <div class="prediction-card">
+      <h3>Delhi - Ward 5</h3>
+      <p>AI Model detected anomaly in TDS levels.</p>
+      <p>📅 Prediction Time: 2025-09-08 10:45 AM</p>
+      <p>⚠️ Risk Level: <span class="risk high">High</span></p>
+      <p>🔔 Action: Immediate inspection advised.</p>
+    </div>
+
+    <!-- Prediction 2 -->
+    <div class="prediction-card">
+      <h3>Mumbai - Zone 3</h3>
+      <p>Bacterial risk probability increased.</p>
+      <p>📅 Prediction Time: 2025-09-08 09:30 AM</p>
+      <p>⚠️ Risk Level: <span class="risk medium">Medium</span></p>
+      <p>🔔 Action: Monitoring required within 24 hours.</p>
+    </div>
+
+    <!-- Prediction 3 -->
+    <div class="prediction-card">
+      <h3>Noida - Sector 10</h3>
+      <p>Stable water quality readings.</p>
+      <p>📅 Prediction Time: 2025-09-08 08:15 AM</p>
+      <p>⚠️ Risk Level: <span class="risk low">Low</span></p>
+      <p>✅ Action: No immediate risk detected.</p>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart">
+      <h3>📊 AI Risk Prediction Trends</h3>
+      <p>(Placeholder graph image)</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/4149/4149670.png" alt="Prediction Chart">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Eco Sentinels | AI Predictions
+  </footer>
+
+</body>
+</html>

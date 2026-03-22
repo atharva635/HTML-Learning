@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Sentinels | Safe Water Monitoring</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * { margin: 0; font-family: Arial; box-sizing: border-box; }
+    .navbar {
+      align-items: center;
+      background-color: #000000;
+      height: 60px;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+    }
+    .box-content h2 a {
+  color: inherit;         /* h2 ka color use karega */
+  text-decoration: none;  /* underline hatayega */
+}
+
+.box-content h2 a:hover {
+  color: #0077b6;         /* hover par thoda stylish blue */
+  text-decoration: underline; /* hover effect optional */
+}
+
+    .nav-logo { height: 70px; width: 70px; }
+    .logo { background-image: url(10.jpg); background-size: cover; height: 60px; width: 100%; }
+    .border:hover { border: 2px solid #308793; }
+    .add-first { color: #CCCCCC; font-size: 14px; margin-left: 14 px; }
+    .add-second { color: #FFFFFF; font-size: 16px; }
+    .icon { display: flex; }
+    .nav-search { display: flex; justify-content: space-evenly; width: 400px; height: px; }
+    .nav-search:hover { border: 2px solid #00b4d8; }
+    .search-select { background-color: #c7bfbf; text-align: center; width: 55px; height: 40px; font-size: 14px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; border: none; }
+    .search-input { width: 100%; height: 38px; border: none; font-size: 1rem; }
+    .search-icon { width: 52px; height: 40px; background-color: #00b4d8; border-bottom-right-radius: 4px; border-top-right-radius: 4px; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; color: #0f1111; }
+    hello { font-size: 12px; margin-left: 5px; }
+    .nav-second, .nav-orders { font-size:14px; font-weight: 700; border: none; background-color: #000; color: #fff; }
+    .nav-cart i { font-size:30px; }
+    .nav-cart { font-size: 1rem; font-weight: 700; }
+    .panel { display: flex; justify-content: space-evenly; background-color: #222f3d; height: 40px; align-items: center; color: #fff; }
+    .panel-option p { display: inline; margin-left: 10px; }
+    .panel-option { width: 77%; }
+    .panel-deals { font-weight: 500; }
+    .hero-section { background-image: url(waterhero.png); background-size: cover; height: 400px; display: flex; justify-content: center; align-items: flex-end; }
+    .hero-message { background-color: white; height: 50px; font-size: 18px; width: 96%; display: flex; align-items: center; justify-content: center; margin-bottom: 65px; font-weight: 600; }
+    .hero-message a { color: #007185; }
+    .shop-section { display: flex; flex-wrap: wrap; justify-content: space-evenly; background-color: #caf0f8; }
+    .Box { width: 356px; height: 420px; background-color: #fff; padding: 20px 0px 15px; margin: 10px; border-radius: 10px; }
+    .Box p { color: #007185; }
+    .box-img { height: 320px; background-size: cover; }
+    .box-content { margin-left: 15px; margin-right: 15px; }
+    .back-to-top { width: 100%; background-color: #222f3d; color: #fff; display: flex; justify-content: center; align-items: center; height: 50px; }
+    .get-to-know { background-color: #007185; display: flex; justify-content: space-evenly; height: 250px; color: #ffffff9c; }
+    .get-to-know a { display: block; font-size: 15px; margin-top: 9px; color: #fff; }
+    ul { margin-top: 20px; }
+    .amazon { height: 68px; background-color: #222f3d; border-top: 3px solid #00e0ff; display: flex; justify-content: center; align-items: center; }
+    .logo-a { background-image: url(waterlogo.png); background-size: cover; height: 55px; width: 120px; }
+    .last { background-color: #007185; height: 50px; }
+    .copyright { font-weight:200; color:#fff; text-align:center; padding-top:7px; }
+    .My-Goal { font-weight:200; color:#fff; text-align:center; }
+  </style>
+</head>
+<body>
+
+<header>
+    
+  <div class="navbar">
+    <div class="nav-logo border"><div class="logo"></div></div>
+    <div class="nav-add border">
+      <p class="add-first">Monitoring Area</p>
+      <div class="icon"><i class="fa-solid fa-location-dot"></i><p class="add-second">India</p></div>
+    </div>
+    <div class="nav-search">
+      <select class="search-select border"><option>All</option></select>
+      <input placeholder="Search Reports, Sensors, Alerts" class="search-input border">
+      <div class="search-icon border"><i class="fa-solid fa-magnifying-glass"></i></div>
+    </div>
+    <select class="lang border"><option>EN</option></select>
+    <div class="nav-signin border"><hello>Hi, Janta</hello><br><select class="nav-second"><option>Dashboard & Tools</option></select></div>
+    <div class="nav-returnsandorders border"><hello>Reports</hello><br><select class="nav-orders"><option>& Issues</option></select></div>
+    <div class="nav-cart"><i class="fa-solid fa-bell"></i> Alerts</div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-all border"><i class="fa-solid fa-bars"></i> Menu</div>
+    <div class="panel-option">
+      <p>Dashboard</p><p>Citizen Reporting</p><p>Authority</p><p>AI Insights</p>
+    </div>
+    <div class="panel-deals border">Real-time Monitoring Active</div>
+  </div>
+</header>
+
+<middle>
+  <div class="hero-section" style="background-image:url(7.jpg); background-size:cover; background-position:center; height:400px;">
+  <div class="hero-message">
+    <p>💧 Eco Sentinels: Real-time Safe Water Monitoring & Citizen Engagement</p>
+  </div>
+</div>
+
+</middle>
+
+<accesories>
+  <div class="shop-section">
+    <div class="Box">
+      <div class="box-content">
+        <h2><a href="http://127.0.0.1:5500/alert.html">📊 IoT Live Data</a></h2>
+        <div class="box-img" style="background-image:url(1.jpg);"></div>
+        <p>Monitor pH, TDS, Turbidity, Temperature with IoT nodes.</p>
+      </div>
+    </div>
+    <div class="Box">
+      <div class="box-content">
+        <h2 ><a href = http://127.0.0.1:5500/citizen.html>📝 Citizen Reporting</a></h2>
+        <div class="box-img" style="background-image:url(2.jpg);"></div>
+        <p>Users can submit unsafe water complaints with photos & GPS.</p>
+      </div>
+    </div>
+    <div class="Box">
+      <div class="box-content">
+        <h2><a href = http://127.0.0.1:5500/authority.html>⚙️ Authority Dashboard</a></h2>
+        <div class="box-img" style="background-image:url(3.jpg);"></div>
+        <p>Authorities receive auto-generated tickets and hotspot alerts.</p>
+      </div>
+    </div>
+    <div class="Box">
+      <div class="box-content">
+        <h2><a href = http://127.0.0.1:5500/aiprediction.html>🤖 AI Predictions</a></h2>
+        <div class="box-img" style="background-image:url(4.jpg);"></div>
+        <p>AI models predict contamination risks and send proactive warnings.</p>
+      </div>
+    </div>
+  </div>
+</accesories>
+
+<footer>
+  <div class="back-to-top">Back To Top</div>
+  <!-- <div class="get-to-know">
+    <ul><p>Get To Know</p><a>About Project</a><a>Process</a><a>Benefits</a></ul>
+    <ul><p>Connect</p><a>Twitter</a><a>Instagram</a><a>LinkedIn</a></ul>
+  </div>
+  <div class="amazon"><div class="logo-a"></div></div>
+  <div class="last">
+    <div class="copyright"><a>Eco Sentinels</a> | <a>Safe Water Monitoring</a></div>
+    <div class="My-Goal">© 2025, SIH Prototype by Team Eco Sentinels</div> -->
+  </div>
+</footer>
+
+</body>
+</html>
